@@ -3,33 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Profile</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
   <link rel="stylesheet" href="profile.style.client.css">
 
 </head>
 <body>
-  <div class="container">
-    <h1>Profile</h1>
-
+<div class="container">
+  <h1>Profile</h1>
+  <form action="">
     <div class="alert alert-success" role="alert">
       Your profile has been updated!
-    </div>
-
-    <div class="alert alert-danger" role="alert">
-      You have been successfully logged out!
     </div>
 
     <div class="form-group row">
       <label for="inputUsername" class="col-sm-2 col-form-label">Username:</label>
       <div class="col-sm-10">
-        <input type="Username" readonly class="form-control" id="inputUsername" placeholder="HollyZ">
+        <input type="Username" readonly class="form-control" id="inputUsername"
+               placeholder="HollyZ">
       </div>
     </div>
 
     <div class="form-group row">
       <label for="inputPhoneNumber" class="col-sm-2 col-form-label">Phone:</label>
       <div class="col-sm-10">
-        <input type="PhoneNumber" class="form-control" id="inputPhoneNumber" placeholder="e.g. 2061231234">
+        <input type="PhoneNumber" class="form-control" id="inputPhoneNumber"
+               placeholder="e.g. 2061231234">
       </div>
     </div>
 
@@ -45,7 +46,7 @@
       <div class="col-sm-10">
         <input type="date" class="form-control" id="datePicker" name="trip-start"
                value="1995-12-29"
-               min="2018-01-01" max="2018-12-31">
+        >
       </div>
     </div>
 
@@ -68,11 +69,18 @@
     </div>
 
     <div>
-      <button id="logoutBtn" class="btn btn-primary btn-block">Logout</button>
+      <button id="logoutBtn" class="btn btn-primary btn-block" onclick=" relocate_home()">Logout
+      </button>
+      <script>
+        function relocate_home() {
+          location.href = "../index.html";
+        }
+      </script>
     </div>
-    <a href="../index.html">Back To Home Page</a>
-    <div class="alertFld">
-    </div>
+  </form>
+  <a href="../index.html">Back To Home Page</a>
+  <div class="alertFld">
   </div>
+</div>
 </body>
 </html>
