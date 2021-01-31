@@ -69,12 +69,12 @@
     </div>
 
     <div>
-      <button id="logoutBtn" class="btn btn-primary btn-block">Logout
+      <button id="logoutBtn" class="btn btn-primary btn-block" onclick=" relocate_home()">Logout
       </button>
-      <script type="text/javascript">
-        document.getElementById("logoutBtn").onclick = function () {
-          location.href = "http://localhost:8080/index.html";
-        };
+      <script>
+        function relocate_home() {
+          location.href = "../index.html";
+        }
       </script>
     </div>
 
