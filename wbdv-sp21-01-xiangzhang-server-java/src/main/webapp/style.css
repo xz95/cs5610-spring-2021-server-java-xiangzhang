@@ -1,5 +1,5 @@
 .wbdv-sticky-navbar {
-  background-color: aquamarine;
+  background-color: darkcyan;
   padding: 10px;
   position: fixed;
   width: 100%;
@@ -7,7 +7,7 @@
 }
 
 .container {
-  padding-top: 58px;
+  padding-top: 80px;
 }
 
 #dashboard {

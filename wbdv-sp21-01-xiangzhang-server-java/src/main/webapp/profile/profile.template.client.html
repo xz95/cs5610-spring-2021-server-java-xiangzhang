@@ -13,7 +13,7 @@
 <body>
 <div class="container">
   <h1>Profile</h1>
-  <form action="">
+
     <div class="alert alert-success" role="alert">
       Your profile has been updated!
     </div>
@@ -69,15 +69,15 @@
     </div>
 
     <div>
-      <button id="logoutBtn" class="btn btn-primary btn-block" onclick=" relocate_home()">Logout
+      <button id="logoutBtn" class="btn btn-primary btn-block">Logout
       </button>
-      <script>
-        function relocate_home() {
-          location.href = "../index.html";
-        }
+      <script type="text/javascript">
+        document.getElementById("logoutBtn").onclick = function () {
+          location.href = "http://localhost:8080/index.html";
+        };
       </script>
     </div>
-  </form>
+
   <a href="../index.html">Back To Home Page</a>
   <div class="alertFld">
   </div>
