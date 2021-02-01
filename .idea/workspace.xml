@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c04998f8-f2cf-4838-bb4f-fa30aa027c3d" name="Default Changelist" comment="" />
+    <list default="true" id="c04998f8-f2cf-4838-bb4f-fa30aa027c3d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wbdv-sp21-01-xiangzhang-server-java/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wbdv-sp21-01-xiangzhang-server-java/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612222083091</updated>
-      <workItem from="1612222084462" duration="30000" />
+      <workItem from="1612222084462" duration="629000" />
     </task>
     <servers />
   </component>
