@@ -1,6 +1,20 @@
 h1 {
   text-align: center;
-  font-family: fantasy;
-  color:indianred;
-  background-color: bisque;
+}
+
+a{
+  color: white;
+}
+
+a:hover {
+  color: orange;
+}
+
+body {
+  background: url('https://images.pexels.com/photos/158385/lake-mcdonald-landscape-panorama-sunset-158385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  color: white;
 }
