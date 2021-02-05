@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c04998f8-f2cf-4838-bb4f-fa30aa027c3d" name="Default Changelist" comment="" />
+    <list default="true" id="c04998f8-f2cf-4838-bb4f-fa30aa027c3d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wbdv-sp21-01-xiangzhang-server-java/src/main/webapp/user-admin/user-admin.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/wbdv-sp21-01-xiangzhang-server-java/src/main/webapp/user-admin/user-admin.template.client.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -56,6 +60,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cs5610-spring-2021-server-java-xiangzhang/wbdv-sp21-01-xiangzhang-server-java/src/main/webapp/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612222083091</updated>
       <workItem from="1612222084462" duration="630000" />
-      <workItem from="1612483823285" duration="481000" />
+      <workItem from="1612483823285" duration="771000" />
     </task>
     <servers />
   </component>
