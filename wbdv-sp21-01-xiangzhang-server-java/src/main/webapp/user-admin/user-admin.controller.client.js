@@ -55,30 +55,37 @@
 // })();
 
 var users = [
-  {username: "New User",
+  {username: "A",
     password: "0000",
-    firstName: "first name",
-    lastName: "last name",
+    firstName: "a",
+    lastName: "a",
     role: "Faculty"
   },
-  {username: "New User",
+  {username: "B",
     password: "1111",
-    firstName: "first name",
-    lastName: "last name",
+    firstName: "b",
+    lastName: "b",
     role: "Faculty"
   }
 ];
+
+var defaultNewUser = {username: "New User",
+  password: "0000",
+  firstName: "first name",
+  lastName: "last name",
+  role: "Faculty"
+}
+
+var addCourseBtn = jQuery("#wbdv-addCourseBtn")
+addCourseBtn.click(function () {
+  createUser(defaultNewUser)
+})
 
 main()
 
 function main() {
   renderUsers(users)
-  createUser({username: "New User",
-    password: "0000",
-    firstName: "first name",
-    lastName: "last name",
-    role: "Faculty"
-  })
+  //createUser(defaultNewUser)
 }
  function createUser(user) {
   users.push(user)
