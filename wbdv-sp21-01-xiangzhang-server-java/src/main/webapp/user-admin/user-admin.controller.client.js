@@ -131,7 +131,7 @@ function renderUsers(users) {
             <td class="wbdv-actions">
             <span class="pull-right">
               <i class="fa-2x fa fa-times wbdv-remove" id="${i}"></i>
-              <i class="fa-2x fa fa-pencil wbdv-edit" id="${i}"></i>
+              <i class="fa-2x fa fa-pencil wbdv-edit" id="${user._id}"></i>
             </span>
             </td>
           </tr> 
@@ -139,10 +139,11 @@ function renderUsers(users) {
   }
   jQuery(".wbdv-remove")
   .click(deleteUser)
+  jQuery(".wbdv-edit")
+  .click(selectUser)
 };
 
 function deleteUser(event) {
-  console.log(event.target)
   var deleteBtn = jQuery(event.target)
   var theIndex = deleteBtn.attr("id")
   var theId = users[theIndex]._id
@@ -155,7 +156,16 @@ function deleteUser(event) {
 
 }
 
-// function selectUser() { … }
+function selectUser(event) {
+  var selectBtn = jQuery(event.target)
+  var theId = selectBtn.attr("id")
+  var theUser = users.find(user => user._id === theId)
+  $usernameFld.val(theUser.username)
+  $passwordFld.val(theUser.password)
+  $firstNameFld.val(theUser.firstName)
+  $lastNameFld.val(theUser.lastName)
+  $roleFld.val(theUser.role)
+}
 
 
 function updateUser() {
