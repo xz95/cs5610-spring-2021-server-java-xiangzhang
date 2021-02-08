@@ -89,15 +89,18 @@ var userService = new AdminUserServiceClient()
 
 function main() {
   alert("dom has loaded")
-  $addCourseBtn = jQuery("#wbdv-addCourseBtn")
+  $addCourseBtn = jQuery("#wbdv-addUserBtn")
   $usernameFld = jQuery("#usernameFld")
   $passwordFld = jQuery("#passwordFld")
   $firstNameFld = jQuery("#firstNameFld")
   $lastNameFld = jQuery("#lastNameFld")
   $roleFld = jQuery("#roleFld")
-  $updateBtn = jQuery("#wbdv-updateCourseBtn")
+  $updateBtn = jQuery("#wbdv-updateUserBtn")
   $tableBody = jQuery("tbody");
+
   $addCourseBtn.click(addUser)
+  $updateBtn.click(updateUser)
+
   //createUser(defaultNewUser)
   // fetch all users from Json
   userService.findAllUsers()
@@ -156,19 +159,31 @@ function deleteUser(event) {
 
 }
 
+var selectedUser = null
 function selectUser(event) {
   var selectBtn = jQuery(event.target)
   var theId = selectBtn.attr("id")
-  var theUser = users.find(user => user._id === theId)
-  $usernameFld.val(theUser.username)
-  $passwordFld.val(theUser.password)
-  $firstNameFld.val(theUser.firstName)
-  $lastNameFld.val(theUser.lastName)
-  $roleFld.val(theUser.role)
+  selectedUser = users.find(user => user._id === theId)
+  $usernameFld.val(selectedUser.username)
+  $passwordFld.val(selectedUser.password)
+  $firstNameFld.val(selectedUser.firstName)
+  $lastNameFld.val(selectedUser.lastName)
+  $roleFld.val(selectedUser.role)
 }
 
 
 function updateUser() {
+  selectedUser.username = $usernameFld.val()
+  selectedUser.password = $passwordFld.val()
+  selectedUser.firstName = $firstNameFld.val()
+  selectedUser.lastName = $lastNameFld.val()
+  selectedUser.role = $roleFld.val()
+  userService.updateUser(selectedUser._id, selectedUser)
+            .then(function (status) {
+              var index = users.findIndex(user => user._id === selectedUser._id)
+              users[index] = selectedUser
+              renderUsers(users)
+            })
 
 }
 
