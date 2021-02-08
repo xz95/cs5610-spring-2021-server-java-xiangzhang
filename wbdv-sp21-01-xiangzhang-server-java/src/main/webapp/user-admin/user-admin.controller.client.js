@@ -108,8 +108,11 @@ function main() {
 }
 
 function createUser(user) {
-  users.push(user)
-  renderUsers(users)
+  userService.createUser(user)
+              .then(function (actualUser) {
+    users.push(user)
+    renderUsers(users)
+  })
 }
 
 function renderUsers(users) {
@@ -143,6 +146,7 @@ function deleteUser(event) {
   var deleteBtn = jQuery(event.target)
   var theIndex = deleteBtn.attr("id")
   var theId = users[theIndex]._id
+
   userService.deleteUser(theId)
               .then(function (status) {
                 users.splice(theIndex, 1)

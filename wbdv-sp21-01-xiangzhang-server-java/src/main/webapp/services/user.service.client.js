@@ -7,7 +7,15 @@ function AdminUserServiceClient() {
   this.url = 'https://wbdv-generic-server.herokuapp.com/api/001832331/users';
   var self = this;
   function createUser(user) {
-
+    return fetch(self.url, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user) //convert user into string that can be stream into the internet
+    }).then(function (response) {
+      return response.json()
+    })
   }
   function findAllUsers() {
     // fetch returns an object
@@ -25,6 +33,7 @@ function AdminUserServiceClient() {
   }
   function deleteUser(userId) {
     return fetch(`${self.url}/${userId}`,
-        {method: 'DELETE'})
+        {method: 'DELETE'},
+        {mode: 'cors'})
   }
 }
