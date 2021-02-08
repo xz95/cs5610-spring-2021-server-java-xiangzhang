@@ -1,4 +1,3 @@
-
 // (function () {
 //   var users = [
 //     {username: "New User",
@@ -15,24 +14,24 @@
 //     }
 //   ];
 
-  // var $usernameFld, $passwordFld;
-  // var $firstNameFld, $lastNameFld, $roleFld;
-  // var $removeBtn, $editBtn, $createBtn;
-  // var $userRowTemplate, $tbody;
-  // var $addCourse = jQuery("#addCourse")
-  //var userService = new AdminUserServiceClient();
-  // $(main);
-  //
-  //
-  // function main() {
-  //   renderUsers()
-  // }
-  //  function createUser() {
-  //
-  // }
-  // function deleteUser() { … }
-  // function selectUser() { … }
-  // function updateUser() { … }
+// var $usernameFld, $passwordFld;
+// var $firstNameFld, $lastNameFld, $roleFld;
+// var $removeBtn, $editBtn, $createBtn;
+// var $userRowTemplate, $tbody;
+// var $addCourse = jQuery("#addCourse")
+//var userService = new AdminUserServiceClient();
+// $(main);
+//
+//
+// function main() {
+//   renderUsers()
+// }
+//  function createUser() {
+//
+// }
+// function deleteUser() { … }
+// function selectUser() { … }
+// function updateUser() { … }
 //    function renderUsers(users) {
 //     $tbody = jQuery("tbody");
 //     console.log(users.length)
@@ -55,13 +54,15 @@
 // })();
 
 var users = [
-  {username: "A",
+  {
+    username: "A",
     password: "0000",
     firstName: "a",
     lastName: "a",
     role: "Faculty"
   },
-  {username: "B",
+  {
+    username: "B",
     password: "1111",
     firstName: "b",
     lastName: "b",
@@ -69,17 +70,15 @@ var users = [
   }
 ];
 
-var defaultNewUser = {username: "New User",
+var defaultNewUser = {
+  username: "New User",
   password: "0000",
   firstName: "first name",
   lastName: "last name",
   role: "Faculty"
 }
 
-var addCourseBtn = jQuery("#wbdv-addCourseBtn")
-addCourseBtn.click(function () {
-  createUser(defaultNewUser)
-})
+
 
 main()
 
@@ -87,9 +86,10 @@ function main() {
   renderUsers(users)
   //createUser(defaultNewUser)
 }
- function createUser(user) {
+
+function createUser(user) {
   users.push(user)
-   renderUsers(users)
+  renderUsers(users)
 }
 
 function renderUsers(users) {
@@ -107,19 +107,49 @@ function renderUsers(users) {
             <td>${user.role}</td>
             <td class="wbdv-actions">
             <span class="pull-right">
-              <i class="fa-2x fa fa-times wbdv-remove"></i>
-              <i class="fa-2x fa fa-pencil wbdv-edit"></i>
+              <i class="fa-2x fa fa-times wbdv-remove" id="${i}"></i>
+              <i class="fa-2x fa fa-pencil wbdv-edit" id="${i}"></i>
             </span>
             </td>
           </tr> 
           `)
   }
+  jQuery(".wbdv-remove")
+  .click(function (event) {
+    console.log(event.target)
+    var deleteBtn = jQuery(event.target)
+    var theId = deleteBtn.attr("id")
+    deleteUser(theId)
+  })
+};
+
+function deleteUser(id) {
+  users.splice(id, 1)
+  renderUsers(users)
 }
 
-// function deleteUser() { … }
-
 // function selectUser() { … }
-// function updateUser() { … }
 
+var addCourseBtn = jQuery("#wbdv-addCourseBtn")
+var $usernameFld = jQuery("#usernameFld")
+var $passwordFld = jQuery("#passwordFld")
+var $firstNameFld = jQuery("#firstNameFld")
+var $lastNameFld = jQuery("#lastNameFld")
+var $roleFld = jQuery("#roleFld")
+var $updateBtn = $("#wbdv-updateCourseBtn")
 
+function updateUser() {
+
+}
+
+addCourseBtn.click(function () {
+  var newUser = {
+    username: $usernameFld.val(),
+    password: $passwordFld.val(),
+    firstName: $firstNameFld.val(),
+    lastName: $lastNameFld.val(),
+    role: $roleFld.val()
+  }
+  createUser(newUser)
+})
 
