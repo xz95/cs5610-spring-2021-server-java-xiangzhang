@@ -85,6 +85,7 @@ var $lastNameFld
 var $roleFld
 var $updateBtn
 var $tableBody
+var userService = new AdminUserServiceClient()
 
 function main() {
   alert("dom has loaded")
@@ -96,9 +97,14 @@ function main() {
   $roleFld = jQuery("#roleFld")
   $updateBtn = jQuery("#wbdv-updateCourseBtn")
   $tableBody = jQuery("tbody");
-  renderUsers(users)
   $addCourseBtn.click(addUser)
   //createUser(defaultNewUser)
+  // fetch all users from Json
+  userService.findAllUsers()
+            .then(function (actualUsersFromServer) {
+              users = actualUsersFromServer
+              renderUsers(users)
+            })
 }
 
 function createUser(user) {
@@ -135,9 +141,14 @@ function renderUsers(users) {
 function deleteUser(event) {
   console.log(event.target)
   var deleteBtn = jQuery(event.target)
-  var theId = deleteBtn.attr("id")
-  users.splice(theId, 1)
-  renderUsers(users)
+  var theIndex = deleteBtn.attr("id")
+  var theId = users[theIndex]._id
+  userService.deleteUser(theId)
+              .then(function (status) {
+                users.splice(theIndex, 1)
+                renderUsers(users)
+              })
+
 }
 
 // function selectUser() { … }
