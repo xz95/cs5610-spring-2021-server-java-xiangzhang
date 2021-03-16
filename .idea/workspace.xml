@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c04998f8-f2cf-4838-bb4f-fa30aa027c3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wbdv-sp21-01-xiangzhang-server-java/src/main/webapp/user-admin/user-admin.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/wbdv-sp21-01-xiangzhang-server-java/src/main/webapp/user-admin/user-admin.template.client.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wbdv-sp21-01-xiangzhang-server-java/src/main/webapp/course-editor/course-editor.template.client.html" beforeDir="false" afterPath="$PROJECT_DIR$/wbdv-sp21-01-xiangzhang-server-java/src/main/webapp/course-editor/course-editor.template.client.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,19 +47,6 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cs5610-spring-2021-server-java-xiangzhang/wbdv-sp21-01-xiangzhang-server-java/src/main/webapp/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -79,6 +66,8 @@
       <updated>1612222083091</updated>
       <workItem from="1612222084462" duration="630000" />
       <workItem from="1612483823285" duration="771000" />
+      <workItem from="1615267847329" duration="756000" />
+      <workItem from="1615779866181" duration="134000" />
     </task>
     <servers />
   </component>
