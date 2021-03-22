@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
+//Service.java contains the functions that get requested data from the db
 @Service
 public class WidgetService {
   private List<Widget> widgets = new ArrayList<Widget>();
@@ -46,10 +47,29 @@ public class WidgetService {
     }
     return null;
   }
-  public Integer updateWidget(Long id) {
+  public Integer updateWidget(Long id, Widget newWidget) {
+    for(int i=0; i<widgets.size(); i++) {
+      Widget w = widgets.get(i);
+      if(w.getId().equals(id)) {
+        widgets.set(i, newWidget);
+        return 1;
+      }
+    }
     return -1;
   }
+
   public Integer deleteWidget(Long id) {
+    int index = -1;
+    for(int i=0; i<widgets.size(); i++) {
+      Widget w = widgets.get(i);
+      if(w.getId().equals(id)) {
+        index = i;
+      }
+    }
+    if(index >= 0) {
+      widgets.remove(index);
+      return 1;
+    }
     return -1;
   }
 
