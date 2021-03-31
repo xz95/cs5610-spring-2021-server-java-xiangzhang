@@ -1,10 +1,22 @@
 package com.example.wbdvsp2101xiangzhangserverjava.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="widgets")
 public class Widget {
-  private String name;
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  private String type;
+
+  private String name;
   private Integer widgetOrder;
+  private String type;
   private String text;
   private Integer size;
   private String url;
@@ -14,6 +26,15 @@ public class Widget {
 
   private String topicId;
   // todo: add all fields
+
+
+  public Integer getWidgetOrder() {
+    return widgetOrder;
+  }
+
+  public void setWidgetOrder(Integer widgetOrder) {
+    this.widgetOrder = widgetOrder;
+  }
 
   public void setTopicId(String topicId) {
     this.topicId = topicId;
@@ -43,10 +64,6 @@ public class Widget {
     return name;
   }
 
-  public Integer getWidgetOrder() {
-    return widgetOrder;
-  }
-
   public String getUrl() {
     return url;
   }
@@ -69,6 +86,46 @@ public class Widget {
 
   public String getValue() {
     return value;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
+  public void setText(String text) {
+    this.text = text;
+  }
+
+  public void setSize(Integer size) {
+    this.size = size;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+  public void setWidth(Integer width) {
+    this.width = width;
+  }
+
+  public void setHeight(Integer height) {
+    this.height = height;
+  }
+
+  public void setCssClass(String cssClass) {
+    this.cssClass = cssClass;
+  }
+
+  public void setStyle(String style) {
+    this.style = style;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
   }
 
   public Widget() {
