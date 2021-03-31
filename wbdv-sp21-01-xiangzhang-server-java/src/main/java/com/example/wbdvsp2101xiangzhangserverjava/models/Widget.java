@@ -23,7 +23,7 @@ public class Widget {
   private Integer width, height;
   private String cssClass;
   private String style, value;
-
+  private boolean ordered;
   private String topicId;
   // todo: add all fields
 
@@ -35,6 +35,16 @@ public class Widget {
   public void setWidgetOrder(Integer widgetOrder) {
     this.widgetOrder = widgetOrder;
   }
+
+  public boolean isOrdered() {
+    return ordered;
+  }
+
+  public void setOrdered(boolean ordered) {
+    this.ordered = ordered;
+  }
+
+
 
   public void setTopicId(String topicId) {
     this.topicId = topicId;
@@ -142,6 +152,7 @@ public class Widget {
     setWidth(newWidget.getWidth());
     setValue(newWidget.getValue());
     setType(newWidget.getType());
+    setOrdered(newWidget.isOrdered());
   }
 
 
