@@ -128,6 +128,23 @@ public class Widget {
     this.value = value;
   }
 
+  public void setAll(Widget newWidget) {
+    setCssClass(newWidget.getCssClass());
+    setHeight(newWidget.getHeight());
+    setText(newWidget.getText());
+    setId(newWidget.getId());
+    setName(newWidget.getName());
+    setSize(newWidget.getSize());
+    setStyle(newWidget.getStyle());
+    setUrl(newWidget.getUrl());
+    setTopicId(newWidget.getTopicId());
+    setWidgetOrder(newWidget.getWidgetOrder());
+    setWidth(newWidget.getWidth());
+    setValue(newWidget.getValue());
+    setType(newWidget.getType());
+  }
+
+
   public Widget() {
 
   }
